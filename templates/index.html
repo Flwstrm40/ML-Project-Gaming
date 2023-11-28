@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Model Deployment</title>
+</head>
+<body>
+    <h1>ML Model Deployment</h1>
+
+    <form action="/predict" method="post">
+        <label for="feature1">Feature 1:</label>
+        <input type="text" id="feature1" name="feature1" required>
+        <label for="feature1">Feature 2:</label>
+        <input type="text" id="feature2" name="feature2" required>
+        <label for="feature1">Feature 3:</label>
+        <input type="text" id="feature3" name="feature3" required>
+
+        <!-- Add more input fields for other features -->
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <p>Prediction: {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
