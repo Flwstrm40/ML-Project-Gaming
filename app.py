@@ -34,7 +34,7 @@ def predict():
         elif prediction == 4:
             prediction_text = 'Kamu seorang mahasiswa'
 
-        return render_template('index.html', prediction=prediction_text)
+        return render_template('index.html', age=age, annual_income=annual_income, spending_score=spending_score, prediction=prediction_text)
 
 if __name__ == '__main__':
     app.run(debug=True)
