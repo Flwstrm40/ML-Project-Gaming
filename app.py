@@ -25,16 +25,21 @@ def predict():
 
         if prediction == 0:
             prediction_text = 'Kamu adalah orang yang sangat boros'
+            image = 'static/cluster0.jpg'
         elif prediction == 1:
             prediction_text = 'Kamu adalah orang yang boros'
+            image = 'static/cluster1.jpg'
         elif prediction == 2:
             prediction_text = 'Kamu adalah orang yang hemat'
+            image = 'static/cluster2.jpg'
         elif prediction == 3:
             prediction_text = 'Kamu sederhana'
+            image = 'static/cluster3.jpg'
         elif prediction == 4:
             prediction_text = 'Kamu seorang mahasiswa'
+            image = 'static/cluster4.jpg'
 
-        return render_template('index.html', age=age, annual_income=annual_income, spending_score=spending_score, prediction=prediction_text)
+        return render_template('index.html', age=age, annual_income=annual_income, spending_score=spending_score, prediction=prediction_text, image=image)
 
 if __name__ == '__main__':
     app.run(debug=True)
