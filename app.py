@@ -52,20 +52,20 @@ def predict():
         elif prediction == 1:
             prediction_text = 'Kamu adalah orang yang hemat 👍🏿'
             image = 'static/cluster1.jpg'
+            # annual tinggi, spending rendah
         elif prediction == 2:
             prediction_text = 'Kamu suka berfoya-foya 😞'
             image = 'static/cluster2.jpg'
         elif prediction == 3:
             prediction_text = 'Kamu orang yang sederhana'
             image = 'static/cluster3.jpg'
-            # annual tinggi, spending rendah
+            # Linear, annual tengah, spending tengah
         elif prediction == 4:
             prediction_text = 'Kamu adalah orang yang moderat pengeluarannya'
             image = 'static/cluster4.jpg'
-            # Linear, annual tengah, spending tengah
         elif prediction == 5:
             prediction_text = 'Kamus orang memiliki ekonomi rendah dengan pengeluaran rendah'
-            image = 'static/cluster4.jpg'
+            image = 'static/cluster5.jpg'
 
         return render_template('index.html', age=age, annual_income=annual_income, spending_score=spending_score, prediction=prediction_text, image=image)
 
